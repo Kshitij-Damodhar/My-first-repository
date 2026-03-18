@@ -1,1 +1,20 @@
-Riemann Zeta Function PlotterAn interactive visualization of the Riemann Zeta Function $\zeta(s)$ and the Dirichlet Eta Function $\eta(s)$ built with React and HTML5 Canvas.🚀 OverviewThis application visualizes how points in the complex "Input Space" (the $s$-plane) map to the "Output Space" through the Zeta and Eta series. It demonstrates the convergence of the infinite series by plotting partial sums as a sequence of connected vectors.Key FeaturesInteractive Input: Drag the point $s = \sigma + it$ in the left panel to see the output change in real-time.Dual Modes: Toggle between the standard Zeta function and the Dirichlet Eta function.Euler-Maclaurin Correction: For the Zeta function, the app calculates an "Analytic Value" using a correction term to show the true value of $\zeta(s)$ even when using a finite number of terms ($N$).High Performance: Uses a custom-built complex math library and optimized Canvas rendering for smooth 60 FPS interactions.🛠️ Technical DetailsThe project implements several core mathematical concepts:Complex Arithmetic: Manual implementation of complex powers $n^{-s} = e^{-s \ln n}$.Vector Summation: Visualizes $\sum_{n=1}^{N} n^{-s}$ as a path in the complex plane.Analytic Continuation: Uses a first-order correction for the tail of the Zeta series:$$\zeta(s) \approx \sum_{n=1}^{N} \frac{1}{n^s} + \frac{N^{1-s}}{s-1} - \frac{1}{2N^s}$$
+# Riemann Zeta Function Plotter
+
+An interactive visualization of the Riemann Zeta Function $\zeta(s)$ and the Dirichlet Eta Function $\eta(s)$ built with React and HTML5 Canvas.
+
+##  Overview
+This application visualizes how points in the complex **Input Space** (the $s$-plane) map to the **Output Space** through the Zeta and Eta series. It demonstrates the convergence of the infinite series by plotting partial sums as a sequence of connected vectors.
+
+## Key Features
+* **Interactive Input:** Drag the point $s = \sigma + it$ in the left panel to see the output change in real-time.
+* **Dual Modes:** Toggle between the standard Zeta function and the Dirichlet Eta function.
+* **Euler-Maclaurin Correction:** For the Zeta function, the app calculates an "Analytic Value" using a correction term to show the true value of $\zeta(s)$ even when using a finite number of terms ($N$).
+
+##  Technical Details
+The project implements several core mathematical concepts:
+* **Complex Arithmetic:** Manual implementation of complex powers $n^{-s} = e^{-s \ln n}$.
+* **Vector Summation:** Visualizes $\sum_{n=1}^{N} n^{-s}$ as a path in the complex plane.
+* **Analytic Continuation:** Uses a first-order correction for the tail of the Zeta series:
+
+$$\zeta(s) \approx \sum_{n=1}^{N} \frac{1}{n^s} + \frac{N^{1-s}}{s-1} - \frac{1}{2N^s}$$
+ 
